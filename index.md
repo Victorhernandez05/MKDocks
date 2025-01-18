@@ -246,7 +246,7 @@ Comprovació quan es creen els usuaris
 ### Eliminar usuaris
 
 Per eliminar un usuari, es poden utilitzar les comandes deluser o userdel. 
-
+https://github.com/Victorhernandez05/ASIX/tree/main/taller-json
 ##### **Comanda deluser**
 
 Per eliminar un usuari amb deluser, utilitza: ``sudo deluser josep``
@@ -616,3 +616,253 @@ I creem una partició primaria sobre el disc.
 ![alt text](image-66.png)
 
 `/etc/fstab` muntem automàticament el disc /dev/sdb1 per a que quan el sistema arrenca.
+
+### Copies de seguretat
+##### Teoria 
+
+- **1. Tipus de còpies de seguretat:**
+
+Una còpia de seguretat és una rèplica de dades per prevenir la pèrdua d'informació. **Hi ha diversos tipus:**
+
+- **1.1 Completes**
+
+    - Una còpia completa inclou totes les dades seleccionades sense importar si han canviat des de l'última còpia.
+
+ - **Avantatges:**
+
+    Fàcil restauració, ja que només cal aquesta còpia.
+    
+    Independència d'altres còpies.
+
+ - **Inconvenients:**
+
+    Ocupa molt d'espai d'emmagatzematge.
+    
+    Temps llarg per realitzar la còpia.
+
+- **1.2 Diferencials**
+
+    - Només es copien els fitxers que han canviat o s'han creat des de l'última còpia completa.
+
+- **Avantatges:**
+
+    Més ràpida que la completa.
+
+    Restauració més senzilla que l'incremental (es necessita la còpia completa i la darrera diferencial).
+
+- **Inconvenients:**
+
+    Creix en mida amb el temps, ja que acumula tots els canvis des de la completa.
+
+- **1.3 Incrementals**
+
+    - Es copien només els fitxers que han canviat o s'han creat des de l'última còpia (ja sigui completa, diferencial o incremental).
+
+- **Avantatges:**
+
+    Més ràpida i petita en espai.
+
+- **Inconvenients:**
+
+    Restauració més complicada, ja que cal la còpia completa i totes les incrementals successives.
+
+***Tipus de còpies de seguretat***
+
+![alt text](image-68.png)
+
+- **2. Programes per a còpies de seguretat**
+
+- **2.1 Deja-dup**
+
+    Característiques:
+
+    - Interfície gràfica senzilla.
+
+    - Funciona sobre Duplicity.
+
+    - Compatible amb serveis al núvol (Google Drive, Dropbox).
+
+- **2.2 Duplicity**
+
+    Característiques:
+    
+    - Eina per línia de comandes.
+    
+    - Permet còpies encriptades i comprimides.
+    
+    - Suport per a còpies incrementals i remotes.
+
+- **2.3 Altres**
+
+    - rsync: Ideal per còpies diferencials i incrementals.
+    
+    - BorgBackup: Ofereix deduplicació de dades.
+    
+    - Timeshift: Dissenyat per fer còpies de seguretat del sistema 
+    operatiu.
+
+- **3. Comandes per a còpies de seguretat**
+
+- **3.1 Explicació i comparativa**
+
+![alt text](image-67.png)
+
+- **4. Automatització amb scripts i cron i anacron**
+
+![alt text](image-69.png)
+
+- **4.1 Configuració**
+
+- Per tasques generals: Utilitza /etc/crontab.
+
+- Per usuari específic: Utilitza crontab -e -u usuari.
+
+- Ubicació dels arxius:
+    
+    - /etc/cron.daily: Tasques diàries.
+    
+    - /etc/cron.weekly: Tasques setmanals.
+    
+    - /etc/cron.hourly: Tasques horàries.
+    
+- 4.2 Pràctica	
+    
+    - Exemple de com fer un backup de una carpeta a través d’un scripts. 
+
+**Primer de tot creem 2 discs abans de iniciar la maquina virtual.**
+
+![alt text](image-70.png)
+
+![alt text](image-71.png)
+![alt text](image-72.png)
+
+Aquest procés mostra com es poden copiar fitxers i carpetes de manera manual (amb cp -R) d'una ubicació a una altra. 
+
+També es treballa amb particions muntades, com es veu en el punt de muntatge de /dev/sdb1 al directori /var/copies. 
+
+Finalment, s'observa com es poden gestionar els fitxers i carpetes (crear, eliminar i copiar) utilitzant comandes bàsiques del terminal.
+
+![alt text](image-74.png)
+![alt text](image-73.png)
+
+- Primera sincronització (rsync -av): Es copien nous fitxers i carpetes, però no elimina elements que han estat esborrats del directori origen.
+
+- Segona sincronització (rsync -av --delete): A més de copiar fitxers nous o modificats, elimina els fitxers/directoris del destí que ja no estan al directori origen, mantenint ambdós llocs sincronitzats.
+
+![alt text](image-75.png)
+
+- md5sum: Mostra que el contingut inicial de les dues particions/discs és diferent.
+
+- dd: Realitza una còpia sector a sector de /dev/sdb1 a /dev/sdc. Després d'executar aquesta comanda, si executem md5sum, els hash MD5 haurien de coincidir, ja que ara /dev/sdc és una còpia idèntica de /dev/sdb1.
+
+### Automatització de tasques
+
+`/etc ls | grep cron`
+
+![alt text](image-77.png)
+
+Aquestes són totes les carpetes que hi ha a etc del cron.
+
+![alt text](image-78.png)
+
+L'script copies.sh crea còpies comprimides de la carpeta /home/alumnat/Imatges amb noms únics basats en el temps.
+
+![alt text](image-79.png)
+
+El fitxer crontab automatitza l'execució de l’script cada dia a les 10:15 del matí, utilitzant l'usuari root.
+
+El resultat de l'execució es pot veure al directori /home/alumnat/Escriptori amb fitxers tipus copies_<timestamp>.tar.gz.
+
+![alt text](image-80.png)
+
+Per a que es pugi crear el fitxer.
+
+![alt text](image-81.png)
+
+Fem servir anacron anirem a la carpeta “/etc/cron.daily” i mourem el nostre script a l'interior perquè s'executi cada dia un cop s'iniciï l'ordinador
+
+![alt text](image-82.png)
+
+Modifiquem el fitxer “/var/spool/anacron/cron.daily” ja que a l'interior d'aquest fitxer es crea una marca de temps que farà que no s'executin novament els cron.daily avui
+
+![alt text](image-83.png)
+
+Aquest fitxer s'esperarà que l'ordinador s'encengui novament per comprovar les tasques que falten per fer i les farà.
+
+Reinicies l'ordinador i comprovem que es crea novament una marca de temps i al minut com teníem assignat a l'arxiu “/etc/anacrontab”
+
+![alt text](image-84.png)
+
+Slapd
+
+Comanda apt update:
+actualitzem la llista de paquets disponibles al sistema.
+
+![alt text](image-85.png)
+
+Fitxer /etc/hosts:
+
+Associa noms d’host amb adreces IP. Les línies més rellevants són:
+
+- 127.0.0.1 localhost
+
+- 127.0.1.1 victorubuntu
+
+- 10.0.2.5 victorubuntu.victor.com victorubuntu
+
+![alt text](image-99.png)
+
+Fitxer /etc/hostname:
+Aquest fitxer conté el nom del sistema, en aquest cas, victorubuntu.
+
+![alt text](image-100.png)
+
+`apt install slapd ldap-utlis`
+
+Es descarreguen i instal·len:
+
+    slapd: Servei LDAP (Lightweight Directory Access Protocol).
+    
+    ldap-utils: Utilitats per gestionar LDAP des de la línia de comandes.
+
+![alt text](image-88.png)
+
+Durant la instal·lació, es demana:
+
+    Contrasenya d’administrador: Es configura una contrasenya per accedir al servidor LDAP.
+
+![alt text](image-89.png)
+
+Opció per ometre la configuració: Si es selecciona No, s’inicia l’assistent per configurar el servidor.
+
+![alt text](image-90.png)
+
+Es defineix el domini DNS: victor.com
+
+![alt text](image-91.png)
+
+Es proporciona un nom per identificar l’organització. posem el mateix que el de domini dns victor.com
+
+![alt text](image-92.png)
+
+Es torna a introduir la contrasenya d'administrador per validar els canvis.
+
+![alt text](image-93.png)
+
+Opció Sí: Es purga l'antiga base de dades i es preparen les carpetes per a una nova instal·lació.
+
+![alt text](image-94.png)
+
+![alt text](image-95.png)
+
+ldapadd -x -D "cn=admin,dc=victor,dc=com" -W -f /home/alumnat/Baixades.ldif/uo.ldif
+
+Repetim la mateixa comanda peri amb usu.ldif i grup.ldif.
+
+![alt text](image-96.png)
+
+Per ultim fem un `slapcat` i comprovem que esta tot correcte.
+
+![alt text](image-97.png)
+
+![alt text](image-98.png)
