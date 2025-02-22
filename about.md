@@ -35,7 +35,7 @@ Per instal·lar LDAP en un sistema basat en  Ubuntu, executem la següent comand
 
 `apt install libnss-ldap libpam-ldap nscd`
 
-![imagen](img/Imatge enganxada (10).png)
+![imagen](<img/Imatge enganxada (10).png>)
 
 - 2 Configuració del servidor LDAP
 
