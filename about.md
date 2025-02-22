@@ -2,9 +2,36 @@
 
 ### Instal·lació i Configuració de LDAP a Linux
 
+Començen configurant la màquina amb en xarxa NAT.
+
+![imagen](img/Imatge enganxada (70).png)
+
+Configurem la ip manualment `10.0.2.15`
+
+![imagen](img/Imatge enganxada (71).png)
+
+Un cop configurada la ip fem `ip a` i comprovem que esta bé.
+
+![imagen](img/Imatge enganxada (72).png)
+
+Fem un ping a google per verificar la connexió a internet.
+
+
+![imagen](img/Imatge enganxada (73).png)
+
+Posem el nostre hostname en `/etc/hostname `
+
+![imagen](img/Imatge enganxada (85).png)
+
+
+Entrem a `/etc/hosts` i cambiem el nostre nom domini
+
+![imagen](img/Imatge enganxada (74).png)
+
+
 - 1 Instal·lació dels paquets necessaris
 
-Per instal·lar LDAP en un sistema basat en Debian o Ubuntu, executem la següent comanda:
+Per instal·lar LDAP en un sistema basat en  Ubuntu, executem la següent comanda:
 
 `apt install libnss-ldap libpam-ldap nscd`
 
@@ -212,6 +239,61 @@ Entrem al fitxer editem guardem i executem amb ldapmodify.
 ![alt text](<img/Imatge enganxada (28).png>)
 
 
+### Entorns gràfics
+
+Inici de la configuració 
+
+
+Descarrega Apache desde la pagina web official.
+
+![alt text](<img/Imatge enganxada (84).png>)
+
+A continuació el executem:
+
+![alt text](<img/Imatge enganxada (75).png>)
+
+I selecionem LDAP new connection:
+
+![alt text](<img/Imatge enganxada (76).png>)
+
+Posem el nostre nom i la nostra ip:
+
+![alt text](<img/Imatge enganxada (77).png>)
+
+I posem la configuració del nostre servidor ldap:
+
+![alt text](<img/Imatge enganxada (78).png>)
+
+Un cop establerta la connexió ens surt la estructura LDAP.
+
+![alt text](<img/Imatge enganxada (79).png>)
+
+#### Afegir i configurar registres:
+
+Escull l'opció de crear una entrada desde zero.
+
+![alt text](<img/Imatge enganxada (80).png>)
+
+Definim el objectClass seleccionant posixGroup:
+
+![alt text](<img/Imatge enganxada (81).png>)
+
+Estableix el RDN en aquest cas cn = Public.
+
+
+![alt text](<img/Imatge enganxada (82).png>)
+
+Assigna un valor en gibNumber per exemple 5000.
+
+![alt text](<img/Imatge enganxada (83).png>)
+
+Comprovació:
+
+Desde un client integrat al domini LDAP verifiquem el whaomi i id.
+
+
+![alt text](<img/imagenVirtual.png>)
+
 ###  Instal·lació del servidor NFS
 
 1 Servidor NFS
@@ -364,4 +446,97 @@ S'afegeix la següent línia a /etc/fstab per muntar automàticament /perfils de
 
 ![alt text](<img/Imatge enganxada (50).png>)
 
-I ens hauria de entrar però en el meu cas no he pogut solucionar-ho.
+Posem les credencials i entrem.
+
+### Instal·lació Samba
+
+Per instal·lar Samba executem `apt install samba`
+
+![alt text](<img/Imatge enganxada (51).png>)
+
+Un cop tenim samba instalat començem creant una carpeta proves, i cambiem els permisos de proves amb `chmod -R 777 proves ` també li cambiem el propietari amb `chown nobody:nogroup proves` i afegim l'arxiu "hola" a dins la carpeta.
+
+![alt text](<img/Imatge enganxada (53).png>)
+
+Dins de ` etc/samba/smb.conf ` podem veure o modificar el recurs compartit en samba.
+
+![alt text](<img/Imatge enganxada (52).png>)
+
+Fem un restart per a que es guardin les modificacions aplicades.
+
+![alt text](<img/Imatge enganxada (54).png>)
+
+Ara afegim els usuaris Blau, Groc i Roig, per a fer unes proves.
+
+![alt text](<img/Imatge enganxada (55).png>)
+
+Afegim al grup "colors" Roig i Groc.
+
+![alt text](<img/Imatge enganxada (56).png>)
+
+I fem un `tail` per comprovar que esta creat.
+
+![alt text](<img/Imatge enganxada (57).png>)
+
+Afegim una contrasenya als usuaris en samba per a utilitzar-los.
+
+![alt text](<img/Imatge enganxada (58).png>)
+
+#### Samba en Client
+
+Instalem el samba amb `apt install smbclient`
+
+![alt text](<img/Imatge enganxada (59).png>)
+
+Per a conectarse al servidor entrem al arxius i en altres ubicacions afegim `smb://IP/Repositori/`
+
+![alt text](<img/Imatge enganxada (86).png>)
+
+I en conectem
+
+![alt text](<img/Imatge enganxada (87).png>)
+
+Pero al conectarnos amb anomin ens surt un misatge d'error que es normal.
+
+![alt text](<img/Imatge enganxada (60).png>)
+
+Llavors anem a la carpeta per a cambiar el parametres.
+
+![alt text](<img/Imatge enganxada (61).png>)
+
+
+Reiniciem el servidor.
+
+![alt text](<img/Imatge enganxada (62).png>)
+
+I ara si ens deixa obrir les carpetes de samba desde el client.
+
+![alt text](<img/Imatge enganxada (63).png>)
+
+I fem la comprovació de que es veu la carpeta actualizada desde el servidor.
+
+![alt text](<img/Imatge enganxada (64).png>)
+
+Ara fem una prova pero en un altre usuari.
+
+![alt text](<img/Imatge enganxada (65).png>)
+
+Comprovem que es pot veure la carpeta perque hem afegit els parametres en smb.conf.
+
+![alt text](<img/Imatge enganxada (66).png>)
+
+I comprovem el usuari.
+
+![alt text](<img/Imatge enganxada (67).png>)
+
+Ara desde el usuari groc fem la mateixa prova.
+
+![alt text](<img/Imatge enganxada (68).png>)
+
+I ens salta l'error, ja que, no te permisos.
+
+![alt text](<img/Imatge enganxada (69).png>)
+
+Finalment provem el usuari Roig que directament no ens deixa ni entrar.
+
+![alt text](<img/Imatge enganxada (88).png>)
