@@ -4,29 +4,29 @@
 
 Començen configurant la màquina amb en xarxa NAT.
 
-![imagen](img/Imatge enganxada (70).png)
+![imagen](<img/Imatge enganxada (70).png>)
 
 Configurem la ip manualment `10.0.2.15`
 
-![imagen](img/Imatge enganxada (71).png)
+![imagen](<img/Imatge enganxada (71).png>)
 
 Un cop configurada la ip fem `ip a` i comprovem que esta bé.
 
-![imagen](img/Imatge enganxada (72).png)
+![imagen](<img/Imatge enganxada (72).png>)
 
 Fem un ping a google per verificar la connexió a internet.
 
 
-![imagen](img/Imatge enganxada (73).png)
+![imagen](<img/Imatge enganxada (73).png>)
 
 Posem el nostre hostname en `/etc/hostname `
 
-![imagen](img/Imatge enganxada (85).png)
+![imagen](<img/Imatge enganxada (85).png>)
 
 
 Entrem a `/etc/hosts` i cambiem el nostre nom domini
 
-![imagen](img/Imatge enganxada (74).png)
+![imagen](<img/Imatge enganxada (74).png>)
 
 
 - 1 Instal·lació dels paquets necessaris
