@@ -21,7 +21,7 @@ Primerament fem un `apt update`
 
 I comencem a instalar el paquet per als RAID.
 
-![imagen](img/Imatge enganxada (89).png)
+![imagen](<img/Imatge enganxada (89).png>)
 
 Fem un `fdisk -l`per a veure el discos que hem afegit.
 
