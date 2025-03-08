@@ -17,15 +17,15 @@ Hi ha diversos tipus de RAID, cadascun amb característiques diferents segons le
 
 Primerament fem un `apt update`
 
-![imagen](img/Imatge enganxada (91).png)
+![imagen](<img/Imatge enganxada (91).png>)
 
 I comencem a instalar el paquet per als RAID.
 
-![imagen](img/Imatge enganxada (89).png)
+![imagen](<img/Imatge enganxada (89).png>)
 
 Fem un `fdisk -l`per a veure el discos que hem afegit.
 
-![imagen](img/Imatge enganxada (92).png)
+![imagen](<img/Imatge enganxada (92).png>)
 
 Entrem als discos i cambiem el sistemes de fitxer
 
