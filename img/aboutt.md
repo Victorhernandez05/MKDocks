@@ -17,7 +17,7 @@ Hi ha diversos tipus de RAID, cadascun amb característiques diferents segons le
 
 Primerament fem un `apt update`
 
-![imagen](img/Imatge enganxada (91).png)
+![imagen](<img/Imatge enganxada (91).png>)
 
 I comencem a instalar el paquet per als RAID.
 
