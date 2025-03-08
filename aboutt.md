@@ -29,99 +29,99 @@ Fem un `fdisk -l`per a veure el discos que hem afegit.
 
 Entrem als discos i cambiem el sistemes de fitxer
 
-![imagen](img/Imatge enganxada (93).png)
+![imagen](<img/Imatge enganxada (93).png>)
 
 Ara fem un altre cop `fdisk -l` per comprovar que s'han fet els canvis.
 
-![imagen](img/Imatge enganxada (94).png)
+![imagen](<img/Imatge enganxada (94).png>)
 
 Creem la carpeta raid y li donem tots els permisos.
 
-![imagen](img/Imatge enganxada (95).png)
+![imagen](<img/Imatge enganxada (95).png>)
 
 Creem el RAID:
 
-![imagen](img/Imatge enganxada (96).png)
+![imagen](<img/Imatge enganxada (96).png>)
 
 Caviem el format:
 
-![imagen](img/Imatge enganxada (97).png)
+![imagen](<img/Imatge enganxada (97).png>)
 
 Per rebre informació del raid utilitzarem “mdadm –detail /dev/md0”
 
-![imagen](img/Imatge enganxada (98).png)
+![imagen](<img/Imatge enganxada (98).png>)
 
 Ara farem que el raid es munti automàticament anant al fitxer “/etc/mdadm.conf” i afegim la següent línia.
 
-![imagen](img/Imatge enganxada (99).png)
+![imagen](<img/Imatge enganxada (99).png>)
 
 I afegirem també una línia al fitxer /etc/fstab
 
-![imagen](img/Imatge enganxada (100).png)
+![imagen](<img/Imatge enganxada (100).png>)
 
 Un cop aplicats els canvis reiniciem:
 
-![imagen](img/Imatge enganxada (101).png)
+![imagen](<img/Imatge enganxada (101).png>)
 
 Un cop s'hagi iniciat novament la màquina per comprovar que tot ha funcionat correctament farem un detail “mdadm –detail /dev/md0”
 
-![imagen](img/Imatge enganxada (102).png)
+![imagen](<img/Imatge enganxada (102).png>)
 
 Ara per fer les proves crearem una carpeta i un fitxer dins
 
-![imagen](img/Imatge enganxada (103).png)
+![imagen](<img/Imatge enganxada (103).png>)
 
 
 Ara farem fallar un dels discos per comprovar que passa “mdadm /dev/md0 -f /dev/sdb1”
 
-![imagen](img/Imatge enganxada (104).png)
+![imagen](<img/Imatge enganxada (104).png>)
 
 Hauria de sortir així en un detail
 
-![imagen](img/Imatge enganxada (105).png)
+![imagen](<img/Imatge enganxada (105).png>)
 
 Ara creem una carpeta comprovar que podem treballar amb un sol disc
 
-![imagen](img/Imatge enganxada (106).png)
+![imagen](<img/Imatge enganxada (106).png>)
 
 Ara traurem el disc que falla com es fa en màquines fisiques, es farà amb l'ordre “mdadm /dev/md0 -r /dev/sdb1”
 
-![imagen](img/Imatge enganxada (108).png)
+![imagen](<img/Imatge enganxada (108).png>)
 
 Reiniciem i comprovem que esta actiu:
 
-![imagen](img/Imatge enganxada (110).png)
+![imagen](<img/Imatge enganxada (110).png>)
 
 Ara eliminem el disc per comprovar com abans (amb la maquina apagada):
 
-![imagen](img/Imatge enganxada (107).png)
+![imagen](<img/Imatge enganxada (107).png>)
 
 I podem comprovar que a la carpeta raid 1 no hi ha res
 
-![imagen](img/Imatge enganxada (109).png)
+![imagen](<img/Imatge enganxada (109).png>)
 
 Creem novament un altre disc.
 
-![imagen](img/Imatge enganxada (111).png)
+![imagen](<img/Imatge enganxada (111).png>)
 
 I mirem que esta el disc afegit.
 
-![imagen](img/Imatge enganxada (112).png)
+![imagen](<img/Imatge enganxada (112).png>)
 
 Afegim el disc amb `mdadm /dev/md0 -a /dev/sdb1`
 
-![imagen](img/Imatge enganxada (113).png)
+![imagen](<img/Imatge enganxada (113).png>)
 
 Ara veurem si funciona correctament després de fer un reboot.
 
-![imagen](img/Imatge enganxada (114).png)
+![imagen](<img/Imatge enganxada (114).png>)
 
 Ara desmuntem el raid i fem un stop també eliminem la carpeta de `/mnt/raid1` (no vaig fer captura)
 
 Comentem la linia que vam afegir.
 
-![imagen](img/Imatge enganxada (115).png)
+![imagen](<img/Imatge enganxada (115).png>)
 
 I borrem el interior de  `etc/mdadm.conf`
 
-![imagen](img/Imatge enganxada (116).png)
+![imagen](<img/Imatge enganxada (116).png>)
