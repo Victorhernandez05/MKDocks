@@ -15,13 +15,17 @@ Hi ha diversos tipus de RAID, cadascun amb característiques diferents segons le
     RAID 5: Reparteix les dades i la informació de paritat entre almenys tres discos. Ofereix un bon equilibri entre rendiment i redundància.
     RAID 6: Similar al RAID 5, però amb el doble de paritat, la qual cosa permet suportar la fallada de fins a dos discos.
 
+
+## RAID 1
+
+
 Primerament fem un `apt update`
 
-![imagen](<img/Imatge enganxada (91).png>)
+![imagen](img/Imatge enganxada (91).png)
 
 I comencem a instalar el paquet per als RAID.
 
-![imagen](<img/Imatge enganxada (89).png>)
+![imagen](img/Imatge enganxada (89).png)
 
 Fem un `fdisk -l`per a veure el discos que hem afegit.
 
@@ -125,3 +129,126 @@ Comentem la linia que vam afegir.
 I borrem el interior de  `etc/mdadm.conf`
 
 ![imagen](img/Imatge enganxada (116).png)
+
+
+## RAID 5
+
+Per a raid 5 haurem d'afegir 4 discos durs.
+
+![imagen](img/Imatge enganxada (117).png)
+
+
+![imagen](img/Imatge enganxada (118).png)
+
+Hem d'entrar dins de cada disc per canviar el sistema de fitxers de cadascun.
+
+
+![imagen](img/Imatge enganxada (119).png)
+
+
+![imagen](img/Imatge enganxada (120).png)
+
+
+![imagen](img/Imatge enganxada (121).png)
+
+
+![imagen](img/Imatge enganxada (122).png)
+
+fem un `fdisk -l` per comprovar que surten els discos que hem canviat i verificar que esta tot bé.
+
+![imagen](img/Imatge enganxada (123).png)
+
+![imagen](img/Imatge enganxada (124).png)
+
+Creem la carpeta on es formarà el raid i apliquem els permisos per fer-la servir.
+
+![imagen](img/Imatge enganxada (125).png)
+
+
+![imagen](img/Imatge enganxada (127).png)
+
+Creem el RAID amb aquesta comanda:
+
+`mdadm –create /dev/md0 –level=5 –raid-devices=4 /dev/sdb1 /dev/sdc1 /dev/sdd1 /dev/sde1`
+
+I cambiem el format per utilitzar-lo.
+
+![imagen](img/Imatge enganxada (128).png)
+
+Per rebre informació de raid utilitzarem `mdadm –detail /dev/md0`
+
+![imagen](img/Imatge enganxada (129).png)
+
+
+Ara farem que el –detail –scan se'n vagi a una carpeta en un .txt que nosaltres li indicarem
+
+![imagen](img/Imatge enganxada (130).png)
+
+Farem que el raid es munti automàticament anant al fitxer /etc/mdadm/mdadm.conf i afegim la següent línia
+
+![imagen](img/Imatge enganxada (131).png)
+
+A `/etc/fstab` afegim l'ultima linea.
+
+![imagen](img/Imatge enganxada (132).png)
+
+#### Abans de fer el reboot apliquem aquestes comandes:
+
+![imagen](img/Imatge enganxada (133).png)
+
+Un cop s'hagi iniciat novament la màquina comprovem que tot ha funcionat correctament farem un `mdadm --detail /dev/md0`
+
+![imagen](img/Imatge enganxada (134).png)
+
+Ara per fer les proves crearem una carpeta i un fitxer dins.
+
+![imagen](img/Imatge enganxada (135).png)
+
+Ara farem fallar un dels discs per comprovar què passa mdadm /dev/md0 -f /dev/sdb1.
+
+![imagen](img/Imatge enganxada (136).png)
+
+Comprovem amb `mdadm --detail /dev/md0` que realment esta fallant.
+
+![imagen](img/Imatge enganxada (137).png)
+
+
+`mdadm /dev/md0 -r /dev/sdb1` amb aquesta comanda treurem el disc que falla.
+
+![imagen](img/Imatge enganxada (138).png)
+
+Comprovem amb un detail i surt "removed" esta bé.
+
+![imagen](img/Imatge enganxada (139).png)
+
+Ara per comprovar que podem treballar amb un disc menys crearem novament un altra carpeta.
+
+![imagen](img/Imatge enganxada (140).png)
+
+Ara quitem un altre disc.
+
+![imagen](img/Imatge enganxada (141).png)
+
+![imagen](img/Imatge enganxada (142).png)
+
+![imagen](img/Imatge enganxada (143).png)
+
+![imagen](img/Imatge enganxada (144).png)
+
+fem un ls i comprovem que funciona.
+
+![imagen](img/Imatge enganxada (145).png)
+
+Continua funcionant, per la qual cosa sortirem de la màquina i traurem els discos de la mateixa per comprovar què passa.
+
+![imagen](img/Imatge enganxada (146).png)
+
+
+Comprovem i fem novament un detail.
+
+![imagen](img/Imatge enganxada (147).png)
+
+I podem confirmar que ja no funciona
+
+![imagen](img/Imatge enganxada (148).png)
+
