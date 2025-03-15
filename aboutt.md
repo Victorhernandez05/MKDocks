@@ -252,4 +252,3 @@ I podem confirmar que ja no funciona
 
 ![imagen](<img/Imatge enganxada (148).png>)
 
-s
