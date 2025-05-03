@@ -16,7 +16,7 @@ Requisits previs:
 
     IP estàtica assignada.
 
-![imagen](img/Imatge enganxada (246).png)
+![imagen](<img/Imatge enganxada (246).png>)
 
 ##### Instal·lar el rol Active Directory Domain Services (AD DS)
 
@@ -26,11 +26,11 @@ Requisits previs:
 
     Accepta les pantalles fins arribar a Server Roles.
 
-![imagen](img/Imatge enganxada (247).png)
+![imagen](<img/Imatge enganxada (247).png>)
 
-![imagen](img/Imatge enganxada (248).png)
+![imagen](<img/Imatge enganxada (248).png>)
 
-![imagen](img/Imatge enganxada (249).png)
+![imagen](<img/Imatge enganxada (249).png>)
 
 
     Marca “Active Directory Domain Services”.
@@ -39,13 +39,13 @@ Requisits previs:
 
     Finalitza i clica “Install” (no cal reiniciar encara).
 
-![imagen](img/Imatge enganxada (250).png)
+![imagen](<img/Imatge enganxada (250).png>)
 
-![imagen](img/Imatge enganxada (251).png)
+![imagen](<img/Imatge enganxada (251).png>)
 
-![imagen](img/Imatge enganxada (252).png)
+![imagen](<img/Imatge enganxada (252).png>)
 
-![imagen](img/Imatge enganxada (253).png)
+![imagen](<img/Imatge enganxada (253).png>)
 
 Passos bàsics:
 
@@ -55,18 +55,18 @@ Promoure el servidor com a controlador de domini.
 
 Crear un nou domini (ex: empresa.local).
 
-![imagen](img/Imatge enganxada (254).png)
+![imagen](<img/Imatge enganxada (254).png>)
 
-![imagen](img/Imatge enganxada (255).png)
+![imagen](<img/Imatge enganxada (255).png>)
 
-![imagen](img/Imatge enganxada (256).png)
+![imagen](<img/Imatge enganxada (256).png>)
 
-![imagen](img/Imatge enganxada (257).png)
+![imagen](<img/Imatge enganxada (257).png>)
 
 
 Reiniciar el sistema i verificar la funcionalitat.
 
-![imagen](img/Imatge enganxada (258).png)
+![imagen](<img/Imatge enganxada (258).png>)
 
 #### 3. 👥 Administració de comptes d'usuari i equips
 ##### 1. Crear comptes d’usuari al domini
@@ -74,13 +74,13 @@ Reiniciar el sistema i verificar la funcionalitat.
 
     Obre Server Manager > Tools > Active Directory Users and Computers.
 
-![imagen](img/Imatge enganxada (259).png)
+![imagen](<img/Imatge enganxada (259).png>)
 
     A la part esquerra, desplega el domini (ex: empresa.local).
 
     Fes clic dret sobre la carpeta Users (o una Unitat Organitzativa que hagis creat) > New > User.
 
-![imagen](img/Imatge enganxada (260).png)
+![imagen](<img/Imatge enganxada (260).png>)
 
 
     Introdueix:
@@ -95,9 +95,9 @@ Reiniciar el sistema i verificar la funcionalitat.
 
         Desactiva l’opció si vols una contrasenya fixa per fer proves.
 
-![imagen](img/Imatge enganxada (261).png)
+![imagen](<img/Imatge enganxada (261).png>)
 
-![imagen](img/Imatge enganxada (262).png)
+![imagen](<img/Imatge enganxada (262).png>)
 
 ##### 2. Crear grups per gestionar permisos de forma col·lectiva
 
@@ -105,14 +105,14 @@ Reiniciar el sistema i verificar la funcionalitat.
 
     Escriu el nom del grup.
 
-![imagen](img/Imatge enganxada (263).png)
+![imagen](<img/Imatge enganxada (263).png>)
 
 
     Tipus: Security | Àmbit: Global.
 
     Un cop creat, obre el grup > pestanya Members > Add per afegir usuaris
 
-![imagen](img/Imatge enganxada (264).png)
+![imagen](<img/Imatge enganxada (264).png>)
 
 
 #### 4. 🧲 Perfils mòbils i carpetes personals
@@ -136,11 +136,11 @@ Fes clic dret > Propietats > pestanya Compartir.
 
 Fes clic a “Compartir avançat”:
 
-![imagen](img/Imatge enganxada (266).png)
+![imagen](<img/Imatge enganxada (266).png>)
 
     Marca Compartir aquesta carpeta.
 
-![imagen](img/Imatge enganxada (265).png)
+![imagen](<img/Imatge enganxada (265).png>)
 
 Assigna un nom.
 
@@ -169,7 +169,7 @@ Fes clic a Agregar usuario o grupo.
 Clica Comprobar nombres, després Aceptar.
 
 Aplica els canvis i tanca l’editor.
-![imagen](img/Imatge enganxada (267).png)
+![imagen](<img/Imatge enganxada (267).png>)
 
 Prova iniciar sessió.
 
@@ -199,7 +199,7 @@ Prova iniciar sessió.
 
     Clica Comprobar nombres i després Aceptar.
 
-![imagen](img/Imatge enganxada (268).png)
+![imagen](<img/Imatge enganxada (268).png>)
 
 ##### 3. 📁 Crear una carpeta compartida al servidor i aplicar permisos
 
@@ -218,13 +218,13 @@ A Permisos de compartició:
     Elimina Tots.
 
     Afegeix el grup DepartamentVendes > Dona-li Control total.
-![imagen](img/Imatge enganxada (269).png)
+![imagen](<img/Imatge enganxada (269).png>)
 
 A la pestanya Seguretat (NTFS):
 
     Fes el mateix: afegeix el grup i assigna permisos.
     
-![imagen](img/Imatge enganxada (270).png)
+![imagen](<img/Imatge enganxada (270).png>)
 
 
 #### 6. 🔐 Directives de seguretat i drets d'usuari
@@ -261,7 +261,7 @@ Complexitat i caducitat de contrasenyes
 
         Longitud mínima: 8 caràcterers
 
-![imagen](img/Imatge enganxada (271).png)
+![imagen](<img/Imatge enganxada (271).png>)
 
 
 Permetre inici de sessió local
@@ -282,7 +282,7 @@ Afegeix:
 
     O grups concrets com DepartamentLocal
 
-![imagen](img/Imatge enganxada (272).png)
+![imagen](<img/Imatge enganxada (272).png>)
 
 
 
@@ -309,7 +309,7 @@ Afegeix:
         Dona Control total.
 
 
-![imagen](img/Imatge enganxada (273).png)
+![imagen](<img/Imatge enganxada (273).png>)
 
 ##### 2. 🛡️ Configurar permisos NTFS (seguretat)
 
@@ -321,7 +321,7 @@ Afegeix:
 
     Aplica i tanca.
 
-![imagen](img/Imatge enganxada (274).png)
+![imagen](<img/Imatge enganxada (274).png>)
 
 ##### 3. 🖨️ Compartir una impressora 
 
@@ -334,7 +334,7 @@ Afegeix:
     Dona permisos des de la pestanya Seguretat (igual que amb les carpetes).
 Compartició (accés en xarxa)
 
-![imagen](img/Imatge enganxada (275).png)
+![imagen](<img/Imatge enganxada (275).png>)
 
 ##### 4. 📜 Aplicar connexions de xarxa automàticament (GPO)
 
@@ -353,7 +353,7 @@ Configura:
 
     Unidad: Z:
 
-![imagen](img/Imatge enganxada (276).png)
+![imagen](<img/Imatge enganxada (276).png>)
 
 
 #### 8. 🧰 Servidors de fitxers, impressió i aplicacions
@@ -373,11 +373,11 @@ A Permisos, afegeix:
 
     Dona permisos de lectura/escriptura segons el cas.
 
-![imagen](img/Imatge enganxada (277).png)
+![imagen](<img/Imatge enganxada (277).png>)
 
 A la pestanya Seguretat (NTFS), fes el mateix.
 
-![imagen](img/Imatge enganxada (278).png)
+![imagen](<img/Imatge enganxada (278).png>)
 
 ##### Servidor d’impressió
 
@@ -393,7 +393,7 @@ A la pestanya Seguretat (NTFS), fes el mateix.
 
     A la pestanya Seguretat, afegeix grups d’usuaris amb permís per imprimir.
 
-![imagen](img/Imatge enganxada (279).png)
+![imagen](<img/Imatge enganxada (279).png>)
 
 🧪 Des d’un client:
 
@@ -401,7 +401,7 @@ A la pestanya Seguretat (NTFS), fes el mateix.
 
 \\VICTOR\Impresora
 
-![imagen](img/Imatge enganxada (280).png)
+![imagen](<img/Imatge enganxada (280).png>)
 
 
 ##### 3. Servidor d’aplicacions
@@ -416,7 +416,7 @@ Copia-hi els instal·ladors.
 
 Dona permisos només de lectura als grups autoritzats.
 
-![imagen](img/Imatge enganxada (281).png)
+![imagen](<img/Imatge enganxada (281).png>)
 
 
 
@@ -438,7 +438,7 @@ Dona permisos només de lectura als grups autoritzats.
 
     Aplica els canvis.
 
-![imagen](img/Imatge enganxada (282).png)
+![imagen](<img/Imatge enganxada (282).png>)
 
 ##### 2. Autoritzar usuaris a connectar-se
 
@@ -455,7 +455,7 @@ VICTOR\Alberto
 
 Aplica i tanca.
 
-![imagen](img/Imatge enganxada (283).png)
+![imagen](<img/Imatge enganxada (283).png>)
 
  3. Verificar la IP del servidor
 
@@ -463,7 +463,7 @@ Obre una consola al servidor i escriu:
 
 `ipconfig`
 
-![imagen](img/Imatge enganxada (284).png)
+![imagen](<img/Imatge enganxada (284).png>)
 
 
  4. Connectar des d’un client
@@ -480,7 +480,7 @@ VICTOR\Alberto
 
 Accepta l’avís de certificat si apareix.
 
-![imagen](img/Imatge enganxada (285).png)
+![imagen](<img/Imatge enganxada (285).png>)
 
 
 #### 10. ⛔️ Seguretat i protecció d'accés
@@ -501,7 +501,7 @@ Directiva de contraseñas
 
 Longitud mínima de contraseña	8 caràcters
 
-![imagen](img/Imatge enganxada (286).png)
+![imagen](<img/Imatge enganxada (286).png>)
 
 ##### 2. Aplicar tallafocs i antivirus
 ✅ Tallafocs:
@@ -512,7 +512,7 @@ Longitud mínima de contraseña	8 caràcters
 
     Si tens antivirus de tercers, comprova que no el desactivi.
 
-![imagen](img/Imatge enganxada (287).png)
+![imagen](<img/Imatge enganxada (287).png>)
 
 
 ✅ Antivirus:
@@ -523,7 +523,7 @@ Longitud mínima de contraseña	8 caràcters
 
         Configuración > Actualización y seguridad > Seguridad de Windows > Protección contra virus y amenazas
 
-![imagen](img/Imatge enganxada (288).png)
+![imagen](<img/Imatge enganxada (288).png>)
 
 
 ##### 3. Limitar accessos a recursos
@@ -533,7 +533,7 @@ Longitud mínima de contraseña	8 caràcters
 
     Elimina Tots si hi és per defecte.
 
-![imagen](img/Imatge enganxada (289).png)
+![imagen](<img/Imatge enganxada (289).png>)
 
 
 ##### 4. Documentar i registrar accions
@@ -554,10 +554,10 @@ Activa l’auditoria d’esdeveniments per detectar accés no autoritzat:
 
         Auditoría de acceso a objetos
 
-![imagen](img/Imatge enganxada (290).png)
+![imagen](<img/Imatge enganxada (290).png>)
 
-![imagen](img/Imatge enganxada (291).png)
+![imagen](<img/Imatge enganxada (291).png>)
 
 Els resultats es registraran al Visor d’esdeveniments (eventvwr.msc).
 
-![imagen](img/Imatge enganxada (292).png)
+![imagen](<img/Imatge enganxada (292).png>)
