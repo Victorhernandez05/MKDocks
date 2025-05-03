@@ -6,35 +6,35 @@
 Crear una màquina virtual amb VirtualBox i muntar la ISO de Windows 10.
 
 
-![imagen](img/Imatge enganxada (174).png)
+![imagen](<img/Imatge enganxada (174).png>)
 
 Assignar 2-4 GB de RAM.
 
-![imagen](img/Imatge enganxada (175).png)
+![imagen](<img/Imatge enganxada (175).png>)
 
 1-2 CPUs.
 
-![imagen](img/Imatge enganxada (176).png)
+![imagen](<img/Imatge enganxada (176).png>)
 
 60 GB d'espai en disc (dinàmic o fix).
 
-![imagen](img/Imatge enganxada (177).png)
+![imagen](<img/Imatge enganxada (177).png>)
 
 
 Mode de xarxa: NAT o Bridge.
 
-![imagen](img/Imatge enganxada (178).png)
+![imagen](<img/Imatge enganxada (178).png>)
 
 
 Iniciar la instal·lació i seguir els passos:
 
-![imagen](img/Imatge enganxada (179).png)
+![imagen](<img/Imatge enganxada (179).png>)
 
-![imagen](img/Imatge enganxada (180).png)
+![imagen](<img/Imatge enganxada (180).png>)
 
 
 Regió: Espanya.
-![imagen](img/Imatge enganxada (181).png)
+![imagen](<img/Imatge enganxada (181).png>)
 
 Un cop fet aquest punt, ja tenim la maquina operativa.
 
@@ -66,23 +66,23 @@ Serveix per tornar l’equip a un estat anterior si alguna cosa surt malament, p
 
 Activar la protecció del sistema:
 
-![imagen](img/Imatge enganxada (182).png)
+![imagen](<img/Imatge enganxada (182).png>)
 
-![imagen](img/Imatge enganxada (183).png)
+![imagen](<img/Imatge enganxada (183).png>)
 
-![imagen](img/Imatge enganxada (184).png)
+![imagen](<img/Imatge enganxada (184).png>)
 
 Panell de control > Sistema > Protecció del sistema.
 
 Crear un punt de restauració manual.
 
-![imagen](img/Imatge enganxada (185).png)
+![imagen](<img/Imatge enganxada (185).png>)
 
-![imagen](img/Imatge enganxada (186).png)
+![imagen](<img/Imatge enganxada (186).png>)
 
-![imagen](img/Imatge enganxada (187).png)
+![imagen](<img/Imatge enganxada (187).png>)
 
-![imagen](img/Imatge enganxada (188).png)
+![imagen](<img/Imatge enganxada (188).png>)
 
 #### Llicències
 
@@ -164,13 +164,13 @@ La virtualització és una tecnologia que permet crear una versió simulada d’
 
     Aquest programa crea màquines virtuals (VM), que són "ordinadors virtuals" dins del teu ordinador real.
 
-![imagen](img/Imatge enganxada (189).png)
+![imagen](<img/Imatge enganxada (189).png>)
 
-![imagen](img/Imatge enganxada (190).png)
+![imagen](<img/Imatge enganxada (190).png>)
 
-![imagen](img/Imatge enganxada (191).png)
+![imagen](<img/Imatge enganxada (191).png>)
 
-![imagen](img/Imatge enganxada (192).png)
+![imagen](<img/Imatge enganxada (192).png>)
 
 
 
@@ -224,7 +224,7 @@ MAN (Metropolitan Area Network) Exemple: Xarxa d’una universitat amb diversos 
 
 Xarxa NAT (Network Address Translation)
 
-![imagen](img/Imatge enganxada (193).png)
+![imagen](<img/Imatge enganxada (193).png>)
 
 Característiques:
 
@@ -239,7 +239,7 @@ Per fer proves de navegació, actualitzacions, o treballar de manera aïllada de
  
 Adaptador Pont (Bridge Adapter)
 
-![imagen](img/Imatge enganxada (194).png)
+![imagen](<img/Imatge enganxada (194).png>)
 
 Característiques:
 
@@ -256,7 +256,7 @@ Per entorns col·laboratius, simulació de servidors reals o proves en xarxes de
 
 Adaptador només amfitrió (Host-Only Adapter)
 
-![imagen](img/Imatge enganxada (195).png)
+![imagen](<img/Imatge enganxada (195).png>)
 
 
 Característiques:
@@ -295,19 +295,19 @@ Verificació:
 
 ipconfig
 
-![imagen](img/Imatge enganxada (196).png)
+![imagen](<img/Imatge enganxada (196).png>)
 
 Podem comprovar que la xarxa esta en mode NAT per la IP.
 
 ping 8.8.8.8
 
-![imagen](img/Imatge enganxada (197).png)
+![imagen](<img/Imatge enganxada (197).png>)
 
 Tenim conexió a Internet fent ping a google.
 
 ping nomPC
 
-![imagen](img/Imatge enganxada (198).png)
+![imagen](<img/Imatge enganxada (198).png>)
 
 Per últim comprovem que fa ping la nostra maquina.
 
@@ -316,25 +316,25 @@ Per últim comprovem que fa ping la nostra maquina.
 `ipconfig /all`:  Mostra informació avançada com MAC addresses i servidors DNS.
 
 
-![imagen](img/Imatge enganxada (200).png)
+![imagen](<img/Imatge enganxada (200).png>)
 
 `netstat`: Llista totes les connexions actuals.
 
-![imagen](img/Imatge enganxada (201).png)
+![imagen](<img/Imatge enganxada (201).png>)
 
 `tasklist`: Llista tots els processos amb el seu PID (ID del procés).
 
-![imagen](img/Imatge enganxada (202).png)
+![imagen](<img/Imatge enganxada (202).png>)
 
 
 `taskkill`: Permet tancar (terminar) un procés actiu.
 
-![imagen](img/Imatge enganxada (203).png)
+![imagen](<img/Imatge enganxada (203).png>)
 
 
 `systeminfo`: Ideal per recollir dades de informació del sistema.
 
-![imagen](img/Imatge enganxada (204).png)
+![imagen](<img/Imatge enganxada (204).png>)
 
 
 #### Instal·lació d'aplicacions
@@ -345,17 +345,17 @@ Passos:
 
 Obre el navegador Microsoft Edge.
 
-![imagen](img/Imatge enganxada (205).png)
+![imagen](<img/Imatge enganxada (205).png>)
 
 Fes click en 'Baixa Chrome'.
 
-![imagen](img/Imatge enganxada (206).png)
+![imagen](<img/Imatge enganxada (206).png>)
 
 Li donem a Sí per a que s'executi.
 
-![imagen](img/Imatge enganxada (207).png)
+![imagen](<img/Imatge enganxada (207).png>)
 
-![imagen](img/Imatge enganxada (208).png)
+![imagen](<img/Imatge enganxada (208).png>)
 
 Obre Google Chrome i comprova que funcioni correctament.
 
@@ -367,20 +367,20 @@ Accedeix a la web oficial d’Avast: `https://www.avast.com/free-antivirus-downl
 
 Fes clic a Descargar Gratis.
 
-![imagen](img/Imatge enganxada (209).png)
+![imagen](<img/Imatge enganxada (209).png>)
 
-![imagen](img/Imatge enganxada (210).png)
+![imagen](<img/Imatge enganxada (210).png>)
 
 Executa el fitxer descarregat (doble clic).
 
-![imagen](img/Imatge enganxada (211).png)
+![imagen](<img/Imatge enganxada (211).png>)
 
 Apreta Sí per al permís.
 
-![imagen](img/Imatge enganxada (212).png)
+![imagen](<img/Imatge enganxada (212).png>)
 
 Finalitza la instal·lació i reinicia si et demana.
 
-![imagen](img/Imatge enganxada (213).png)
+![imagen](<img/Imatge enganxada (213).png>)
 
 Per últim comprova que funciona corectament.
