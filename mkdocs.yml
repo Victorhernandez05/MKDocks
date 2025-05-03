@@ -1,0 +1,16 @@
+site_name: Projecte FOG VICTOR
+nav:
+  - SPRINT 2: index.md
+  - SPRINT 3: about.md
+  - SPRINT 5: sprint5.md
+  - SPRINT 1 W: windows.md
+  - SPRINT 2 W: windows2.md
+  - SPRINT 3 W: windows3.md
+
+    
+
+theme: readthedocs
+
+extra_css:
+  - stylesheets/extra.css
+  
