@@ -15,7 +15,7 @@ Les polítiques de seguretat associades als comptes (com ara la complexitat de l
 
 Obrir "Gestio d'equips" (compmgmt.msc).
 
-![imagen](img/Imatge enganxada (214).png)
+<![imagen](img/Imatge enganxada (214).png)>
 
 
 Anar a: Usuaris i grups locals > Usuaris.
