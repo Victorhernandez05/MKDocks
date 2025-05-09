@@ -1,12 +1,12 @@
 ### SPRINT 3: Implementació i Administració d'un Domini Windows
 
-#### 1. 🚀 Què és un Domini Windows?
+#### 1. Què és un Domini Windows?
 
 Un domini és una estructura centralitzada de xarxa gestionada per un servidor amb Active Directory. Permet administrar usuaris, equips, recursos i permisos de manera centralitzada, ideal per a entorns empresarials o escolars.
 
 L'ordinador que gestiona el domini s'anomena controlador de domini (DC).
 
-#### 2. 🔧 Implementar un domini amb Windows Server
+#### 2.  Implementar un domini amb Windows Server
 
 Requisits previs:
 
@@ -68,9 +68,9 @@ Reiniciar el sistema i verificar la funcionalitat.
 
 ![imagen](<img/Imatge enganxada (258).png>)
 
-#### 3. 👥 Administració de comptes d'usuari i equips
+#### 3. Administració de comptes d'usuari i equips
 ##### 1. Crear comptes d’usuari al domini
-🔧 Eina: Active Directory Users and Computers (dsa.msc)
+ Eina: Active Directory Users and Computers (dsa.msc)
 
     Obre Server Manager > Tools > Active Directory Users and Computers.
 
@@ -115,7 +115,7 @@ Reiniciar el sistema i verificar la funcionalitat.
 ![imagen](<img/Imatge enganxada (264).png>)
 
 
-#### 4. 🧲 Perfils mòbils i carpetes personals
+#### 4.  Perfils mòbils i carpetes personals
 
 Què són?
 
@@ -123,7 +123,7 @@ Perfil mòbil: L'entorn personal (escriptori, configuració...) es desa al servi
 
 Carpeta personal (home folder): Espai al servidor on l'usuari desa els seus fitxers.
 
-🗂️ Crear les carpetes al servidor
+ Crear les carpetes al servidor
 
     A l’Explorador de fitxers del servidor:
 
@@ -173,9 +173,9 @@ Aplica els canvis i tanca l’editor.
 
 Prova iniciar sessió.
 
-#### 5. 🛡️ Grups de seguretat i permisos
+#### 5.  Grups de seguretat i permisos
 
-##### 1. 👥 Crear un grup de seguretat a Active Directory
+##### 1.  Crear un grup de seguretat a Active Directory
 
     Obre (Active Directory Users and Computers).
 
@@ -191,7 +191,7 @@ Prova iniciar sessió.
 
     Clica OK.
 
-##### 2. ➕ Afegir usuaris al grup
+##### 2.  Afegir usuaris al grup
 
     Obre el grup creat > Pestanya Members > Add.
 
@@ -201,7 +201,7 @@ Prova iniciar sessió.
 
 ![imagen](<img/Imatge enganxada (268).png>)
 
-##### 3. 📁 Crear una carpeta compartida al servidor i aplicar permisos
+##### 3.  Crear una carpeta compartida al servidor i aplicar permisos
 
     Al servidor, crea una carpeta:
 
@@ -227,9 +227,9 @@ A la pestanya Seguretat (NTFS):
 ![imagen](<img/Imatge enganxada (270).png>)
 
 
-#### 6. 🔐 Directives de seguretat i drets d'usuari
+#### 6.  Directives de seguretat i drets d'usuari
 
-##### 1. 🧭 Obrir el gestor de directives de grup
+##### 1.  Obrir el gestor de directives de grup
 
 Al servidor:
 
@@ -243,7 +243,7 @@ Al servidor:
 
         Nom: Seguretat_Usuaris
 
-##### 2. 🔐 Exemple de configuració de directives de seguretat
+##### 2.  Exemple de configuració de directives de seguretat
 
 Complexitat i caducitat de contrasenyes
 
@@ -286,9 +286,9 @@ Afegeix:
 
 
 
-#### 7. 📁 Accés a recursos locals i de xarxa
+#### 7.  Accés a recursos locals i de xarxa
 
-##### 1. 📂 Compartir una carpeta des del servidor
+##### 1.  Compartir una carpeta des del servidor
 
     Crea una carpeta al servidor:
 
@@ -311,7 +311,7 @@ Afegeix:
 
 ![imagen](<img/Imatge enganxada (273).png>)
 
-##### 2. 🛡️ Configurar permisos NTFS (seguretat)
+##### 2.  Configurar permisos NTFS (seguretat)
 
     A la pestanya Seguretat, fes clic a Editar.
 
@@ -323,7 +323,7 @@ Afegeix:
 
 ![imagen](<img/Imatge enganxada (274).png>)
 
-##### 3. 🖨️ Compartir una impressora 
+##### 3.  Compartir una impressora 
 
     A Configuració > Dispositius > Impressores i escàners, selecciona una impressora instal·lada.
 
@@ -336,7 +336,7 @@ Compartició (accés en xarxa)
 
 ![imagen](<img/Imatge enganxada (275).png>)
 
-##### 4. 📜 Aplicar connexions de xarxa automàticament (GPO)
+##### 4.  Aplicar connexions de xarxa automàticament (GPO)
 
     A la GPO activa (gpmc.msc) ves a:
 
@@ -356,7 +356,7 @@ Configura:
 ![imagen](<img/Imatge enganxada (276).png>)
 
 
-#### 8. 🧰 Servidors de fitxers, impressió i aplicacions
+#### 8.  Servidors de fitxers, impressió i aplicacions
 ##### Crear una carpeta compartida amb permisos:
 
     Crea una carpeta, ex:
@@ -381,7 +381,7 @@ A la pestanya Seguretat (NTFS), fes el mateix.
 
 ##### Servidor d’impressió
 
-✅ Com compartir una impressora:
+ Com compartir una impressora:
 
     Connecta una impressora al servidor o instal·la’n una virtual.
 
@@ -395,7 +395,7 @@ A la pestanya Seguretat (NTFS), fes el mateix.
 
 ![imagen](<img/Imatge enganxada (279).png>)
 
-🧪 Des d’un client:
+ Des d’un client:
 
     A Dispositius i impressió > Afegir impressora > Buscar en xarxa o escriure:
 
@@ -420,7 +420,7 @@ Dona permisos només de lectura als grups autoritzats.
 
 
 
-#### 9. 🚄 Connexió remota i administració
+#### 9. Connexió remota i administració
 
 ##### 1. Activar l’Escriptori remot al servidor
 
@@ -483,11 +483,11 @@ Accepta l’avís de certificat si apareix.
 ![imagen](<img/Imatge enganxada (285).png>)
 
 
-#### 10. ⛔️ Seguretat i protecció d'accés
+#### 10.  Seguretat i protecció d'accés
 
 
 ##### 1. Polítiques de contrasenya i bloqueig
-✅ Configura-ho des d’una GPO:
+ Configura-ho des d’una GPO:
 
     Obre gpmc.msc al servidor.
 
@@ -504,7 +504,7 @@ Longitud mínima de contraseña	8 caràcters
 ![imagen](<img/Imatge enganxada (286).png>)
 
 ##### 2. Aplicar tallafocs i antivirus
-✅ Tallafocs:
+ Tallafocs:
 
     Assegura’t que el Firewall de Windows està actiu:
 
@@ -515,7 +515,7 @@ Longitud mínima de contraseña	8 caràcters
 ![imagen](<img/Imatge enganxada (287).png>)
 
 
-✅ Antivirus:
+ Antivirus:
 
     Si no tens un de pagament, pots usar Microsoft Defender (actiu per defecte).
 
@@ -527,7 +527,7 @@ Longitud mínima de contraseña	8 caràcters
 
 
 ##### 3. Limitar accessos a recursos
-✅ Carpeta o impressora compartida:
+ Carpeta o impressora compartida:
 
     A les propietats > seguretat, assegura’t que només hi accedeixen els grups de seguretat necessaris.
 
