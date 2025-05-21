@@ -15,37 +15,37 @@ Per facilitar la instal·lació i manteniment, s’implanta un servidor FOG que 
 
     Pas 1: Obre el Monitor de Rendiment (Performance Monitor) de Windows Server.
 
-![imagen](img/Imatge enganxada (300).png)
+![imagen](<img/Imatge enganxada (300).png>)
 
 
 
     Pas 2: Selecciona els comptadors rellevants per a CPU (percentatge d’ús), memòria (ús de memòria física, paginació), disc (activitats de lectura/escriptura, temps d’espera) i xarxa (bytes enviats/rebuts, errors).
 
-![imagen](img/Imatge enganxada (302).png)
+![imagen](<img/Imatge enganxada (302).png>)
 
 
-![imagen](img/Imatge enganxada (301).png)
+![imagen](<img/Imatge enganxada (301).png>)
 
 
     Pas 3: Configura alertes perquè t’avisin quan es superin certs llindars, per exemple CPU > 80%, temps d’espera del disc elevat, etc.
 
-![imagen](img/Imatge enganxada (303).png)
+![imagen](<img/Imatge enganxada (303).png>)
 
-![imagen](img/Imatge enganxada (304).png)
+![imagen](<img/Imatge enganxada (304).png>)
 
 
     Pas 4: Executa el Visualitzador de Recursos per obtenir una vista en temps real de l’ús dels recursos i detectar processos que consumeixen massa.
 
 
-![imagen](img/Imatge enganxada (305).png)
+![imagen](<img/Imatge enganxada (305).png>)
 
-![imagen](img/Imatge enganxada (306).png)
+![imagen](<img/Imatge enganxada (306).png>)
 
 
 
     Pas 5: Utilitza el Gestor de Tasques per supervisar processos i serveis actius.
 
-![imagen](img/Imatge enganxada (307).png)
+![imagen](<img/Imatge enganxada (307).png>)
 
 
 
@@ -63,7 +63,7 @@ Per facilitar la instal·lació i manteniment, s’implanta un servidor FOG que 
 
             Auditar ús de privilegis (Audit privilege use)
 
-![imagen](img/Imatge enganxada (308).png)
+![imagen](<img/Imatge enganxada (308).png>)
 
     Pas 2: Auditar carpetes/fitxers específics
 
@@ -82,7 +82,7 @@ Per facilitar la instal·lació i manteniment, s’implanta un servidor FOG que 
             Aplica i tanca totes les finestres.
 
 
-![imagen](img/Imatge enganxada (309).png)
+![imagen](<img/Imatge enganxada (309).png>)
 
 
     Pas 3: Visualitzar esdeveniments d'auditoria
@@ -101,6 +101,6 @@ Per facilitar la instal·lació i manteniment, s’implanta un servidor FOG que 
 
             Canvis de permisos.
 
-![imagen](img/Imatge enganxada (310).png)
+![imagen](<img/Imatge enganxada (310).png>)
 
 
