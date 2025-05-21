@@ -8,9 +8,6 @@ La gestió d’un sistema Windows Server implica monitoritzar el rendiment, gara
 A més, es configura una auditoria que registra accessos i modificacions, tant exitosos com fallits, per detectar anomalies i garantir la seguretat sense afectar massa el rendiment.
 
 
-Per facilitar la instal·lació i manteniment, s’implanta un servidor FOG que permet capturar i desplegar imatges de Windows Server de manera automatitzada i desatesa, incloent scripts de postinstal·lació per aplicar configuracions i programari addicional. Això assegura una gestió eficient i ràpida, amb possibilitat de reinstal·lacions en cas d’error.
-
-
 ### 1. Monitoritzar el sistema per identificar problemes de rendiment
 
     Pas 1: Obre el Monitor de Rendiment (Performance Monitor) de Windows Server.
