@@ -48,9 +48,9 @@ La gestió de processos en Windows és el conjunt de funcions i mecanismes que e
 
     S’hi accedeix des de l’Administrador de tasques a la pestanya “Rendiment” > “Obrir Monitor de recursos”.
 
-![imagen](img/Imatge enganxada (294).png)
+![imagen](<img/Imatge enganxada (294).png>)
 
-![imagen](img/Imatge enganxada (295).png)
+![imagen](<img/Imatge enganxada (295).png>)
 
 
 #### Gestió de processos en CMD 
@@ -58,13 +58,13 @@ La gestió de processos en Windows és el conjunt de funcions i mecanismes que e
 La comanda `tasklist` de Windows és una eina de línia de comandes que mostra una llista dels processos actius al sistema, amb informació útil sobre cadascun.
 
 
-![imagen](img/Imatge enganxada (296).png)
+![imagen](<img/Imatge enganxada (296).png>)
 
 #### Finalitzar procés amb taskkill i PID
 
 Busca el proces que vols finalitzar i executa `taskkill /IM nombre.exe /F`
 
-![imagen](img/Imatge enganxada (297).png)
+![imagen](<img/Imatge enganxada (297).png>)
 
 També existeix la opció de matar el process amb PID `taskkill /PID numero /F`
 
